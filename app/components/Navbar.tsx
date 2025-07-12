@@ -4,6 +4,15 @@ import PeopleIcon from "../icons/PeopleIcon"
 import PlusCircleIcon from "../icons/PlusCircleIcon"
 import MobileMenu from "./MobileMenu"
 import Link from "next/link"
+import {
+  ClerkProvider,
+  SignInButton,
+  SignOutButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from '@clerk/nextjs'
 
 const Navbar = () => {
   return (
@@ -31,9 +40,15 @@ const Navbar = () => {
         <MobileMenu />
         <div className="hidden md:flex lg:flex items-center gap-2">
           <LoginIcon height={18} width={18} />
-          <Link href="/">
-            <span className=" md:block">Login/SignUp</span>
-          </Link>
+          <SignedOut>
+            <SignInButton>
+              <SignUpButton>
+                <Link href="/">
+                  <span className=" md:block">Login/SignUp</span>
+                </Link>
+              </SignUpButton>
+            </SignInButton>
+          </SignedOut>
         </div>
 
       </div>

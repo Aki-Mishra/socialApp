@@ -3,6 +3,14 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Home from "./page";
+import {
+  ClerkProvider,
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from '@clerk/nextjs'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,11 +36,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="bg-[#1E1B2E]	">
         <div className="w-full text-black sm:px-2 md:px-4 lg:px-8 xl:px-16 2xl:px-32">
-
-       <Navbar />
-        {children}  {/* This is very important! */}
+          <Navbar />
+          {children}  {/* This is very important! */}
         </div>
 
       </body>
     </html>
-    ); }
+  );
+}
