@@ -30,23 +30,22 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <ClerkProvider>
-    <html lang="en">
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>My App</title>
-      </head>
-      <body className="bg-[#1E1B2E]	">
-        <div className="w-full bg-[#151A29] text-black md:px-8   lg:px-16 xl:px-32 2xl:px-64">
-          <Navbar />
-          {children}  {/* This is very important! */}
-        </div>
-        <p className="sm:block md:hidden lg:hidden xl:hidden 2xl:hidden">small</p>
-        <p className="sm:hidden md:block lg:hidden xl:hidden 2xl:hidden">medium</p>
-        <p className="sm:hidden md:hidden lg:block xl:hidden 2xl:hidden">large</p>
-        <p className="sm:hidden md:hidden lg:hidden xl:block 2xl:hidden">x-large</p>
-        <p className="sm:hidden md:hidden lg:hidden xl:hidden 2xl:block">2x-large</p>
-      </body>
-    </html>
+      <html lang="en">
+        <head>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>My App</title>
+        </head>
+        <body className="bg-[#1E1B2E]	">
+          <div className="w-full bg-[#151A29] text-black md:px-8   lg:px-16 xl:px-32 2xl:px-64 mb-4">
+            <Navbar />
+
+          </div>
+          <div className="w-full  text-black md:px-8   lg:px-16 xl:px-32 2xl:px-64">
+
+            {children}
+          </div>
+        </body>
+      </html>ś
     </ClerkProvider>
   );
 }
