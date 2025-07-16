@@ -17,7 +17,7 @@ const AddPost = () => {
                     <Image alt="" src="/images/emoji.png" height={35} width={35} className='h-[35px] w-[35px] self-end'></Image>
                 </div>
                 {/* post-option */}
-                <div className='text-[#fff] text-sm flex gap-3'>
+                <div className=' text-[#fff] text-sm flex gap-3 flex-wrap'>
                     <div className="flex gap-1 items-center">
                         <Image alt='' src="/images/gallery.png" height={20} width={20} className='h-[16px] w-[16px]'></Image>
                         <p className='text-sm'>Add Photo</p>
